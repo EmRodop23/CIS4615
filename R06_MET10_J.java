@@ -1,7 +1,7 @@
 // Rule 06. Methods (MET)
 // Met10-J. Follow the General Contract when Implementing the compareTo() Method
 
-class GameEntry implements Comparable {
+class GameEntry {
   public enum Roshambo {ROCK, PAPER, SCISSORS}
   private Roshambo value;
  
@@ -9,7 +9,7 @@ class GameEntry implements Comparable {
     this.value = value;
   }
  
-  public int compareTo(Object that) {
+  public int beats(Object that) {
     if (!(that instanceof GameEntry)) {
       throw new ClassCastException();
     }
